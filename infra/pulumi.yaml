@@ -1,0 +1,3 @@
+# Pulumi.yaml provider configuration file
+name: yomis-blog-stack
+runtime: nodejs
