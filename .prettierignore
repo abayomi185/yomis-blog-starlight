@@ -1,0 +1,4 @@
+node_modules/**
+
+# Don't format secrets
+*secret*
