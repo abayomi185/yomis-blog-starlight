@@ -20,6 +20,9 @@
       default = pkgs.mkShell {
         buildInputs = with pkgs; [
           astro-language-server
+          awscli2
+          mdx-language-server
+          pulumi-bin
         ];
       };
     });
