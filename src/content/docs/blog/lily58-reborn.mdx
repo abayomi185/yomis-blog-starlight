@@ -1,0 +1,54 @@
+---
+title: 'Lily58 Reborn'
+date: 2023-03-05
+author: 'Yomi Ikuru'
+excerpt: Improving ergonomics has no boundaries. This new Lily58 Pro build uses low profile Choc switches and black MBK keycaps.
+cover:
+  image: ../../../assets/blog/lily58-reborn/main.jpeg
+  alt: Lily58 Pro keyboard build; Right half
+tags: ['guide']
+---
+
+import Image from '../../../components/BlogImage.astro';
+import ImageGallery from '../../../components/ImageGallery.astro';
+
+import keyboardsOnDesk from '../../../assets/blog/lily58-reborn/7.jpeg';
+
+import lily58RebornGallery1 from '../../../assets/blog/lily58-reborn/3.jpeg';
+import lily58RebornGallery2 from '../../../assets/blog/lily58-reborn/4.jpeg';
+import lily58RebornGallery3 from '../../../assets/blog/lily58-reborn/5.jpeg';
+import lily58RebornGallery4 from '../../../assets/blog/lily58-reborn/1.jpeg';
+import lily58RebornGallery5 from '../../../assets/blog/lily58-reborn/2.jpeg';
+import lily58RebornGallery6 from '../../../assets/blog/lily58-reborn/6.jpeg';
+
+Remember this? [Lily58L](https://yomis.blog/lily58l), I made a new one!
+
+The first keyboard build was great and I still use it but I was looking for something more portable, with shorter key travel and with less height.
+
+As a result this keyboard uses Kailh Choc v1 red and burnt orange switches. The keycaps are MBK with an overall beautiful black aesthetic.
+
+<ImageGallery
+  images={[
+    { src: lily58RebornGallery1 },
+    { src: lily58RebornGallery2 },
+    { src: lily58RebornGallery3 },
+    { src: lily58RebornGallery4 },
+    { src: lily58RebornGallery5 },
+    { src: lily58RebornGallery6 }
+  ]}
+  alt="Gallery of images of the Lily58L split keyboard during the build process."
+  columns={3}
+/>
+
+I made only one error whilst building this keyboard, soldering the pins for the Nice!Nano V2 controllers upside down (rookie mistake). This required me to desolder and resolder the pins, a skill I have now improved.
+
+My firmware of choice is still ZMK but I am working towards creating my own firmware in Rust, so watch this space -> [RFMK Firmware - Rust for Mechanical Keyboard](https://github.com/abayomi185/rfmk_firmware)
+
+<Image
+  src={keyboardsOnDesk}
+  alt="Old vs New: Both Lily58L and Lily58 Pro (Choc) with mouse and trackpad on a large mouse mat"
+/>
+
+As of publishing this post, the OLED displays do not work and I have not taken the time to intricately investigate it. So far, I have been using it as I would the Lily58L with the added bonus of extra long battery life; the [ZMK power profiler](https://zmk.dev/power-profiler) estimates 2 months+ which I have been unable to confirm just yet.
+
+This build used the Lily58 Pro kit from [Mechboards.co.uk](https://mechboards.co.uk/), my No. 1 spot for keyboard parts with quick delivery and decent stock (Not sponsored).

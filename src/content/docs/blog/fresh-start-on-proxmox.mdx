@@ -1,0 +1,61 @@
+---
+title: 'Proxmox - A Fresh Start'
+date: 2022-02-12
+author: 'Yomi Ikuru'
+excerpt: So why Proxmox? Proxmox is a Hypervisor first and foremost and has a lovely web interface to orchestrate a majority of things that would take more steps to do using a terminal. Proxmox also runs Linux, Debian GNU/Linux to be exact.
+cover:
+  image: ../../../assets/blog/fresh-start-on-proxmox/Proxmox-logo-860.png
+  alt: Proxmox Logo
+tags: ['project']
+---
+
+import Image from '../../../components/BlogImage.astro';
+import ImageGallery from '../../../components/ImageGallery.astro';
+
+import linuxMeme from '../../../assets/blog/fresh-start-on-proxmox/alwayhasbeenlinux.jpg';
+import proxmoxDashboard from '../../../assets/blog/fresh-start-on-proxmox/Screenshot-2022-04-23-at-04.33.49.jpg';
+
+import nr200BuildGallery1 from '../../../assets/blog/fresh-start-on-proxmox/computer_top.jpeg';
+import nr200BuildGallery2 from '../../../assets/blog/fresh-start-on-proxmox/computer_front.jpeg';
+import nr200BuildGallery3 from '../../../assets/blog/fresh-start-on-proxmox/intel_cpu.jpeg';
+import nr200BuildGallery4 from '../../../assets/blog/fresh-start-on-proxmox/computer_side.jpeg';
+import nr200BuildGallery5 from '../../../assets/blog/fresh-start-on-proxmox/computer_cpu_paste.jpeg';
+
+> Please see my [previous blog post](https://yomis.blog/sff-server-pc) for context.
+
+I did it, I finally did it! I learned a lot from using Linux with Linux Mint and I thought I'd take it a step further. An unfamiliar territory that gave me chills but I ventured into it and scoured the proxmox web interface until I stumbled across a chevron above an underscore. Is this what I think it is, a terminal!? \[Cue dramatic music\]. I then swiftly realised that its not as unfamiliar as I thought.
+
+<Image src={linuxMeme} alt="Always has been Linux - source: r/linuxmemes by u/parkerlreed" />
+
+So why Proxmox? Proxmox is a Hypervisor first and foremost and has a lovely web interface to orchestrate a majority of things that would take more steps to do using a terminal. Proxmox also runs Linux, Debian GNU/Linux to be exact.
+
+<Image src={proxmoxDashboard} alt="Proxmox web interface" />
+
+To briefly tell you what has changed from my [previous build](https://yomis.blog/sff-server-pc);
+
+**Case:** Metalfish S3 Plus -> Cooler Master NR200 (larger sff case)
+**CPU:** i5 10400 -> i9 10900T (QTB0 Engineering sample)
+**GPU:** Radeon 5500XT -> Nvidia RTX 3060 Ti (Luckily got it at MSRP)
+**Storage Additions:** 2TB 2.5" WD Blue SATA SSD + 1TB Kingston A2000 NVMe Boot SSD + Repurposed 3.5" 2TB Seagate BarraCuda HDD
+**Fans:** Many 120mm fans (Mostly by Arctic)
+**Antennae:** Cute and small antennae
+
+<ImageGallery
+  images={[
+    { src: nr200BuildGallery1 },
+    { src: nr200BuildGallery2 },
+    { src: nr200BuildGallery3 },
+    { src: nr200BuildGallery4 },
+    { src: nr200BuildGallery5 }
+  ]}
+  alt="New build image gallery"
+  columns={3}
+/>
+
+## Technical Details
+
+Proxmox does things a bit differently to [virt-manager](https://virt-manager.org). They both use QEMU/KVM but Proxmox has its own config file and commands which is not dissimilar to [libvirt](https://en.wikipedia.org/wiki/Libvirt) that runs underneath virt-manager. Proxmox also has an extensive built-in support in the web-UI for managing [LXC](https://en.wikipedia.org/wiki/LXC), [LVM](<https://en.wikipedia.org/wiki/Logical_Volume_Manager_(Linux)>), [ZFS](https://en.wikipedia.org/wiki/ZFS) and recently in PVE 7, [Btrfs](https://en.wikipedia.org/wiki/Btrfs).
+
+Proxmox also makes creating, modifying and assigning networks to guests within the hypervisor very straightforward.
+
+To be continued...
